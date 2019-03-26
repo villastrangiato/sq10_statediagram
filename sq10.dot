@@ -1,0 +1,37 @@
+@startuml
+scale 800 width
+
+Off --> StandBy720P : Press On/Off for 2 seconds
+
+StandBy720P --> Off : Press On/Off for 6 seconds
+StandBy720P --> RecordVideo720P : Click On/Off
+StandBy720P --> StandBy1080P : Click M
+StandBy720P : blue LED is ON
+
+StandBy720P --> InfraRedMode720P : Press On/Off for 3 seconds
+
+InfraRedMode720P : 3 RED blinks = IR Enabled
+InfraRedMode720P : 2 RED blinks = IR Disabled
+InfraRedMode720P --> StandBy720P
+
+RecordVideo720P: - blue LED flashes 3 times then OFF
+RecordVideo720P: - recording starts
+RecordVideo720P: (video will be loop covered if there's no space)
+RecordVideo720P --> StandBy720P : Click On/Off
+
+StandBy1080P : Blue and Red LEDs are ON
+StandBy1080P --> RecordVideo1080P : Click On/Off
+
+StandBy1080P --> InfraRedMode1080P : Press On/Off for 3 seconds
+
+InfraRedMode1080P : 3 RED blinks = IR Enabled
+InfraRedMode1080P : 2 RED blinks = IR Disabled
+InfraRedMode1080P --> StandBy1080P
+
+RecordVideo1080P : - red LED flashes 3 times then both LEDs off
+RecordVideo1080P : - recording starts
+RecordVideo1080P : (video will be loop covered if there's no space)
+RecordVideo1080P --> StandBy1080P : Click On/Off
+RecordVideo1080P --> Off : Click On/Off for 6 seconds
+
+@enduml
