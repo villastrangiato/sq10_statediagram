@@ -1,4 +1,4 @@
-=== UML State Diagram for Mini SQ10 SpyCam
+== UML State Diagram for Mini SQ10 SpyCam
 
 The Mini SpyCam SQ10 is a nice piece of hardware but, having a reduced user interface (just a bi-color led and two buttons) accessing all of its features could be not-too-userfriendly.
 
@@ -9,3 +9,5 @@ In order to generate the bitmap image you have to install [PlantUML](https://git
 It comes pre-packaged in several GNU/Linux distribution. In Fedora, all you have to do is just `dnf install -y plantuml` 
 
 To generate a bitmap from the source just use the command `plantuml sq10.dot`
+
+![final result](https://raw.githubusercontent.com/villastrangiato/sq10_statediagram/master/sq10.png)
